@@ -11,7 +11,7 @@ app.use(express.static('public'));
 app.set('view engine', 'ejs');
 
 // OpenWeatherMap API Key (Sign up at https://openweathermap.org/api to get your own key)
-const WEATHER_API_KEY = 'f4be5af5bc68c1b347462eaf01009f49'; // Replace with your key
+const WEATHER_API_KEY = process.env.WEATHER_API_KEY; // Replace with your key
 const WEATHER_API_URL = 'https://api.openweathermap.org/data/2.5/weather';
 
 // Rate Limiting (e.g., 100 requests per 15 minutes)
