@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 7 - Weather App</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <h1>Task 7: Weather Checker</h1>
+    
+    <!-- Form to get weather -->
+    <form id="weatherForm" action="/weather" method="POST">
+        <input type="text" id="city" name="city" placeholder="Enter city name" required>
+        <button type="submit">Get Weather</button>
+    </form>
+
+    <!-- Weather Display -->
+    <div id="weatherResult">
+        <% if (weather) { %>
+            <h2>Weather in <%= weather.city %></h2>
+            <p>Temperature: <%= weather.temp %>°C</p>
+            <p>Description: <%= weather.description %></p>
+            <img src="<%= weather.icon %>" alt="Weather Icon">
+        <% } %>
+        <% if (error) { %>
+            <p class="error"><%= error %></p>
+        <% } %>
+    </div>
+
+    <script src="/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+    "name": "task-7",
+    "version": "1.0.0",
+    "description": "Task 7 of Cognifyz Internship",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js"
+    },
+    "dependencies": {
+        "axios": "^1.6.8",
+        "ejs": "^3.1.9",
+        "express": "^4.18.2",
+        "express-rate-limit": "^7.2.0"
+    }
+}
